@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="300" height="60" viewBox="0 0 300 60" fill="none" font-family="'Segoe UI', Arial, sans-serif">
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#c6ff5e"/>
-      <stop offset="1" stop-color="#a3e635"/>
+      <stop offset="0" stop-color="#ff6b6b"/>
+      <stop offset="1" stop-color="#ee3a3a"/>
     </linearGradient>
     <filter id="s" x="-20%" y="-20%" width="140%" height="160%">
       <feDropShadow dx="0" dy="4" stdDeviation="0" flood-color="#0b0b0f"/>
