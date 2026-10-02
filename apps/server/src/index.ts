@@ -1,12 +1,12 @@
 /**
- * SideRail - Xray-core VPN management panel
- * Copyright (c) 2025 icubaby. All rights reserved.
- * Official repository: https://github.com/icubaby/SideRail
+ * Parham - Xray-core VPN management panel
+ * Copyright (c) 2025 Parham. All rights reserved.
+ * Official repository: https://github.com/parham101112131415/parham-railway
  *
- * Licensed under the SideRail Proprietary License (see LICENSE).
+ * Licensed under the Parham Proprietary License (see LICENSE).
  * Unauthorized selling, white-labeling, or removal of attribution,
  * branding, or the embedded authorship identifiers is prohibited.
- * Watermark: sr-icubaby-2025-9f4c1a7e
+ * Watermark: sr-parham-2025
  */
 import "dotenv/config";
 import http from "node:http";
@@ -27,9 +27,9 @@ import { applyTrafficReset } from "./users.js";
 import { rateLimit } from "./ratelimit.js";
 import { sendDailyBackup } from "./bot.js";
 import { refreshIpInfo } from "./ipinfo.js";
-import { SIDERAIL_SIGNATURE, watermark } from "./brand.js";
+import { PARHAM_SIGNATURE, watermark } from "./brand.js";
 
-console.log(SIDERAIL_SIGNATURE);
+console.log(PARHAM_SIGNATURE);
 
 migrate();
 seedInbounds();
@@ -39,9 +39,9 @@ seedDefaultRouting();
 const app = express();
 app.disable("x-powered-by");
 app.use((_req, res, next) => {
-  res.setHeader("X-Powered-By", "SideRail by icubaby");
-  res.setHeader("X-SideRail-Author", "icubaby");
-  res.setHeader("X-SideRail-Repo", "https://github.com/icubaby/SideRail");
+  res.setHeader("X-Powered-By", "Parham by Parham");
+  res.setHeader("X-Parham-Author", "Parham");
+  res.setHeader("X-Parham-Repo", "https://github.com/parham101112131415/parham-railway");
   next();
 });
 app.use(express.json({ limit: "25mb" }));
@@ -80,7 +80,7 @@ const server = http.createServer((req, res) => {
 attachTunnel(server);
 
 server.listen(config.port, config.host, async () => {
-  console.log(`SideRail listening on http://${config.host}:${config.port}`);
+  console.log(`Parham listening on http://${config.host}:${config.port}`);
   await startXray();
   void refreshIpInfo();
 });

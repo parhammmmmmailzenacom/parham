@@ -1,38 +1,12 @@
 <div align="center">
 
-<img src=".github/banner.svg" width="100%" alt="SideRail" />
+# 🔥 Parham
 
-<br/>
-<br/>
-
-<a href="https://railway.com/new">
-  <img src=".github/deploy-button.svg" alt="Deploy on Railway" height="56" />
-</a>
-
-<br/>
-<br/>
-
-<p>
-  <a href="LICENSE"><img src=".github/badges/license.svg" alt="License" height="38" /></a>
-  &nbsp;
-  <a href="https://github.com/XTLS/Xray-core"><img src=".github/badges/xray.svg" alt="Xray-core" height="38" /></a>
-  &nbsp;
-  <a href="https://www.typescriptlang.org"><img src=".github/badges/typescript.svg" alt="TypeScript" height="38" /></a>
-  &nbsp;
-  <a href="https://react.dev"><img src=".github/badges/react.svg" alt="React + Vite" height="38" /></a>
-</p>
-<p>
-  <img src=".github/badges/protocols.svg" alt="Protocols" height="38" />
-  &nbsp;
-  <img src=".github/badges/transports.svg" alt="Transports" height="38" />
-</p>
-
-<br/>
-<br/>
-
-**A bold, neobrutalist VPN control panel — powered by&nbsp;<a href="https://github.com/XTLS/Xray-core"><img src=".github/badges/link-xray.svg" alt="Xray-core" height="22" valign="middle" /></a>&nbsp;and shipped to&nbsp;<a href="https://railway.app"><img src=".github/badges/link-railway.svg" alt="Railway" height="22" valign="middle" /></a>&nbsp;in one click.**
+**A bold, red-on-black VPN control panel — powered by [Xray-core](https://github.com/XTLS/Xray-core) and shipped to [Railway](https://railway.app) in one click.**
 
 *Clean client links. Live stats. Gorgeous subscription pages. No config, no fuss.*
+
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new)
 
 </div>
 
@@ -43,144 +17,67 @@
 
 <br/>
 
-<img src=".github/sections/why.svg" width="380" alt="Why SideRail" />
+## ✨ Theme
 
-<table>
-<tr>
-<td width="50%" valign="top">
+A signature **red/black "Parham" look** across the whole panel:
 
-**One job, done right**
+- 🩸 Deep-red accent (`#ee3a3a`) with glowing gradient buttons and red scrollbar
+- 🫧 Animated gradient backdrop + floating bubbles (canvas, zero deps)
+- 🔊 Real UI sounds (Kenney CC0) — click, toggle, open/close, success/error — with a mute button
+- ✨ Ripple + spark burst on every real tap, modal pop-in, toast shake on errors
+- 🃏 Frosted-glass cards (`backdrop-blur`) with a red hover glow
+- 🅿️ Glowing red **P** logo + `Made with 🔥 by Parham` footer
 
-No feature bloat. SideRail masters **HTTP-based transports behind a TLS edge** — every link is clean, standard, and always `security=tls` on port `443`.
+## ✨ Features
 
-</td>
-<td width="50%" valign="top">
+| Area | What you get |
+|:--|:--|
+| **Dashboard** | Live CPU, RAM, Swap and Storage metrics, plus one-click Backup & Restore |
+| **Users** | Rich create form, summary cards, responsive table, live **Connected IPs** |
+| **Inbounds** | Five HTTP inbounds auto-seeded on first boot, each with a unique port |
+| **Activity Log** | A live timeline of every administrative event |
+| **Settings & Admins** | Owner and Admin roles, scoped permissions, per-admin data quotas |
+| **Subscription** | Per-user page with live usage chart, QR codes and base64 sub links |
+| **Telegram Bot** | Optional bot: get your sub link + QR right in Telegram |
+| **Security** | JWT sessions, built-in rate limiting, sniffing fully disabled |
 
-**Impossible to ignore**
-
-A loud **neobrutalist** UI — thick borders, hard shadows, animated icons — that looks razor-sharp on phone and desktop alike.
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-**Deploy and forget**
-
-Xray-core pulls itself on first boot, the session secret is generated for you, and the DB just works. **Zero environment variables required.**
-
-</td>
-<td width="50%" valign="top">
-
-**Team-friendly**
-
-The Owner adds Admins with scoped page access and personal data quotas — and every Admin only ever sees the users they created.
-
-</td>
-</tr>
-</table>
+**How traffic flows** — TLS is terminated at the Railway edge; all client links use `security=tls` on port `443`. Only `ws`, `httpupgrade` and `xhttp` transports are supported.
 
 <br/>
 
-<img src=".github/sections/features.svg" width="380" alt="Features" />
+## 🚀 Deploy on Railway
 
-<table>
-<tr>
-<td valign="top"><b>Dashboard</b></td>
-<td>Live CPU, RAM, Swap and Storage metrics, plus one-click Backup &amp; Restore of users, inbounds, admins and settings.</td>
-</tr>
-<tr>
-<td valign="top"><b>Users</b></td>
-<td>Rich create form, summary cards, a fully responsive table, live <b>Connected IPs</b>, and per-user actions.</td>
-</tr>
-<tr>
-<td valign="top"><b>Inbounds</b></td>
-<td>Five HTTP inbounds auto-seeded on first boot. Enable or disable only, each with a unique port and <code>/SideRail/...</code> path.</td>
-</tr>
-<tr>
-<td valign="top"><b>Activity Log</b></td>
-<td>A live timeline of every administrative event.</td>
-</tr>
-<tr>
-<td valign="top"><b>Settings &amp; Admins</b></td>
-<td>Owner and Admin roles, scoped permissions, and per-admin data quotas.</td>
-</tr>
-<tr>
-<td valign="top"><b>Subscription</b></td>
-<td>A gorgeous per-user page with a live usage chart, QR codes and a base64 subscription for clients.</td>
-</tr>
-<tr>
-<td valign="top"><b>Security</b></td>
-<td>JWT sessions, built-in rate limiting, and sniffing fully disabled to prevent the QUIC crash.</td>
-</tr>
-</table>
+**No code required:**
 
-<br/>
-
-<img src=".github/sections/deploy.svg" width="380" alt="Deploy on Railway" />
-
-**No code required. Just follow these steps:**
-
-**1. Fork this repository** — click **Fork** at the top-right to copy it to your GitHub account.
-
-**2. Create a Railway project** — head to&nbsp;<a href="https://railway.app"><img src=".github/badges/link-railwayapp.svg" alt="railway.app" height="22" valign="middle" /></a>, then **New Project → Deploy from GitHub repo**, and pick your fork.
-
-**3. Deploy** — Railway reads the `Dockerfile` and `railway.json` and builds automatically.
-
-**4. Expose port `8080`** — open **Settings → Networking → Generate Domain**, and set the port to **`8080`**.
+1. **Fork this repository** — click **Fork** at the top-right.
+2. **Create a Railway project** — **New Project → Deploy from GitHub repo**, pick your fork.
+3. **Deploy** — Railway reads the `Dockerfile` and builds automatically.
+4. **Expose port `8080`** — **Settings → Networking → Generate Domain**, port **`8080`**.
+5. **Add a volume (optional)** — attach a **Volume** at **`/data`** so data survives redeploys.
+6. **Open your panel** — visit the generated domain, land on **Setup**, create your **Owner** account.
 
 > [!IMPORTANT]
-> SideRail listens on port **`8080`** — this is the **only** port you expose. The ports `10085` and `20000–20004` are Xray's internal ports bound to `127.0.0.1`; they are private and must **not** be exposed.
-
-**5. Add a volume (optional)** — attach a **Volume** at **`/data`** so users, admins and settings survive redeploys.
-
-**6. Open your panel** — visit the generated `*.up.railway.app` domain, land on the **Setup** page, and create your **Owner** account.
+> Only port **`8080`** is exposed. Ports `10085` and `20000–20004` are Xray's internal ports on `127.0.0.1` — never expose them.
 
 <br/>
 
-<img src=".github/sections/env.svg" width="380" alt="Environment variables" />
+## ⚙️ Environment variables
 
 **All optional.**
 
 | Variable | Default | Description |
 |:--|:--|:--|
 | `PORT` | `8080` | HTTP port. **Expose this one on Railway.** |
-| `JWT_SECRET` | *auto* | Signs admin session cookies. Auto-generated and persisted if unset. |
+| `JWT_SECRET` | *auto* | Signs admin session cookies. Auto-generated if unset. |
 | `XRAY_VERSION` | `v26.9.9` | Xray-core release fetched on first boot. |
-| `SIDERAIL_DATA_DIR` | `/data` | Persistent data directory (mount a volume here). |
+| `PARHAM_DATA_DIR` | `/data` | Persistent data directory (mount a volume here). |
 | `PUBLIC_DOMAIN` | *auto* | Override for a custom domain. Falls back to `RAILWAY_PUBLIC_DOMAIN`. |
 | `XRAY_API_PORT` | `10085` | Internal Xray stats API port. |
 | `XRAY_INBOUND_BASE_PORT` | `20000` | Base port for internal inbound listeners. |
 
 <br/>
 
-<img src=".github/sections/architecture.svg" width="380" alt="Architecture" />
-
-```
-apps/
-├─ web/           React + Vite + Tailwind (neobrutalism) frontend
-│  └─ src/
-│     ├─ components/ui/   Reusable neobrutalist primitives
-│     ├─ pages/           Dashboard · Users · Inbounds · Activity · Settings · Setup · Login · Subscription
-│     └─ lib/             API client, auth context, helpers
-└─ server/        Express + Node (node:sqlite) backend
-   └─ src/
-      ├─ xray.ts          Binary fetch, process manager, traffic stats, client IPs
-      ├─ xray-config.ts   Config builder (sniffing fully disabled)
-      ├─ tunnel.ts        WS/HTTPUpgrade via net.Socket, XHTTP via http-proxy
-      ├─ links.ts         VLESS/VMess/Trojan link generation
-      ├─ inbounds.ts      Default inbound seeding + enable/disable
-      ├─ users.ts         User model, traffic reset, sub-token logic
-      ├─ auth.ts          Owner/Admin roles, permissions, sessions
-      ├─ ratelimit.ts     Rate limiting / brute-force protection
-      └─ routes.ts        Authenticated REST API
-```
-
-**How traffic flows** — TLS is terminated at the Railway edge; all client links use `security=tls` on port `443`. The Node process routes **WebSocket/HTTPUpgrade** to Xray via raw `net.Socket`, and **XHTTP** through an HTTP proxy. Only `ws`, `httpupgrade` and `xhttp` are supported — raw TCP, gRPC, WireGuard and Hysteria are intentionally left out because they don't survive the edge.
-
-<br/>
-
-<img src=".github/sections/dev.svg" width="380" alt="Local development" />
+## 🛠️ Local development
 
 **Requires Node.js ≥ 22.5 (Node 24 recommended).**
 
@@ -192,65 +89,33 @@ npm run build   # production build (web + server)
 npm start       # serve API + built frontend on :8080
 ```
 
-<br/>
-
-<img src=".github/sections/stars.svg" width="380" alt="Star history" />
-
-<a href="https://www.star-history.com/#icubaby/SideRail&Date">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=icubaby/SideRail&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=icubaby/SideRail&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=icubaby/SideRail&type=Date" width="80%" />
-  </picture>
-</a>
-
-<br/>
-<br/>
-
-<img src=".github/sections/support.svg" width="380" alt="Support the project" />
-
-**Countless late nights and a lot of coffee went into this.** If SideRail powers your setup, a small crypto tip goes straight back into keeping it fast, secure and free for everyone.
-
-<table>
-  <tr>
-    <td align="center" width="180"><img src=".github/badges/coin-btc.svg" alt="Bitcoin" height="34" /></td>
-    <td><code>bc1qx48j9lj989y5c9z8ewpgul2ed69mr50j97a0sk</code></td>
-  </tr>
-  <tr>
-    <td align="center"><img src=".github/badges/coin-eth.svg" alt="Ethereum" height="34" /></td>
-    <td><code>0xF2ba522fD846F83D84131D433f56F885740cFc47</code></td>
-  </tr>
-  <tr>
-    <td align="center"><img src=".github/badges/coin-ltc.svg" alt="Litecoin" height="34" /></td>
-    <td><code>ltc1qh6y8ld27fdleuy3r7gykxxg38rkawl7adzc0dw</code></td>
-  </tr>
-  <tr>
-    <td align="center"><img src=".github/badges/coin-ton.svg" alt="TON" height="34" /></td>
-    <td><code>UQBGN4jXPW44cWQ20EGWqX7sU6K4RlYbnolc3IHoT3UWtmvW</code></td>
-  </tr>
-</table>
+```
+apps/
+├─ web/           React + Vite + Tailwind (Parham red/black theme) frontend
+│  └─ src/
+│     ├─ components/parham-fx.*  Bubbles, ripples, sounds, glow effects
+│     ├─ components/ui/          Neobrutalist primitives (glass cards, glow buttons)
+│     ├─ pages/                  Dashboard · Users · Inbounds · Activity · Settings · Subscription
+│     └─ lib/                    API client, auth context, brand, helpers
+└─ server/        Express + Node (node:sqlite) backend
+   └─ src/
+      ├─ xray.ts          Binary fetch, process manager, traffic stats, client IPs
+      ├─ xray-config.ts   Config builder (sniffing fully disabled)
+      ├─ tunnel.ts        WS/HTTPUpgrade via net.Socket, XHTTP via http-proxy
+      ├─ links.ts         VLESS/VMess/Trojan link generation
+      ├─ users.ts         User model, traffic reset, sub-token logic
+      ├─ auth.ts          Owner/Admin roles, permissions, sessions
+      └─ routes.ts        Authenticated REST API
+```
 
 <br/>
 
-<img src=".github/sections/license.svg" width="380" alt="License & Copyright" />
+## 📞 Support
 
-**SideRail is proprietary software. © 2025 icubaby — all rights reserved.**
-
-It is published for transparency and personal self-hosting only. You are welcome to fork and run your own instance, but the following are **strictly prohibited** without prior written permission:
-
-- Selling, reselling, or offering SideRail (or any derivative) as a paid product or service.
-- White-labeling or re-branding it under another name.
-- Removing or altering the **icubaby / SideRail** attribution, branding, logos, repository links, or the embedded authorship watermarks.
-- Claiming authorship of the project.
-
-The source code carries embedded authorship identifiers and watermarks used to prove origin.
-
-<a href="LICENSE"><img src=".github/badges/license-terms.svg" alt="Full license terms" height="38" /></a>
+Telegram: **[@par1234mehr](https://t.me/par1234mehr)**
 
 <br/>
 
-<div align="center">
+## 📄 License
 
-<a href="LICENSE"><img src=".github/badges/license.svg" alt="License" height="40" /></a>
-
-</div>
+**Proprietary — © 2025 Parham, all rights reserved.** Published for transparency and personal self-hosting only. Fork and run your own instance, but selling, white-labeling, removing attribution, or claiming authorship are prohibited without permission. See [LICENSE](LICENSE).

@@ -1,12 +1,12 @@
 /**
- * SideRail - Xray-core VPN management panel
- * Copyright (c) 2025 icubaby. All rights reserved.
- * Official repository: https://github.com/icubaby/SideRail
+ * Parham - Xray-core VPN management panel
+ * Copyright (c) 2025 Parham. All rights reserved.
+ * Official repository: https://github.com/parham101112131415/parham-railway
  *
- * Licensed under the SideRail Proprietary License (see LICENSE).
+ * Licensed under the Parham Proprietary License (see LICENSE).
  * Unauthorized selling, white-labeling, or removal of attribution,
  * branding, or the embedded authorship identifiers is prohibited.
- * Watermark: sr-icubaby-2025-9f4c1a7e
+ * Watermark: sr-parham-2025
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -45,7 +45,7 @@ function assetName(): string {
 function download(url: string, dest: string): Promise<void> {
   return new Promise((resolve, reject) => {
     const file = createWriteStream(dest);
-    const req = https.get(url, { headers: { "User-Agent": "SideRail" } }, (res) => {
+    const req = https.get(url, { headers: { "User-Agent": "Parham" } }, (res) => {
       if (res.statusCode && res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
         file.close();
         download(res.headers.location, dest).then(resolve).catch(reject);

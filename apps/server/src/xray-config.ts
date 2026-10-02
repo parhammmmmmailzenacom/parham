@@ -1,12 +1,12 @@
 /**
- * SideRail - Xray-core VPN management panel
- * Copyright (c) 2025 icubaby. All rights reserved.
- * Official repository: https://github.com/icubaby/SideRail
+ * Parham - Xray-core VPN management panel
+ * Copyright (c) 2025 Parham. All rights reserved.
+ * Official repository: https://github.com/parham101112131415/parham-railway
  *
- * Licensed under the SideRail Proprietary License (see LICENSE).
+ * Licensed under the Parham Proprietary License (see LICENSE).
  * Unauthorized selling, white-labeling, or removal of attribution,
  * branding, or the embedded authorship identifiers is prohibited.
- * Watermark: sr-icubaby-2025-9f4c1a7e
+ * Watermark: sr-parham-2025
  */
 import { config } from "./config.js";
 import { listEnabledInbounds } from "./inbounds.js";
