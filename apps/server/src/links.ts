@@ -18,8 +18,8 @@ interface LinkContext {
   inbound: Inbound;
 }
 
-function label(inbound: Inbound): string {
-  return `parham101112131415/parham-railway - ${inbound.tag}`;
+function label(user: UserWithInbounds, inbound: Inbound): string {
+  return `${user.email} - ${inbound.tag}`;
 }
 
 function commonQuery(ctx: LinkContext): Record<string, string> {
@@ -51,14 +51,14 @@ function qs(params: Record<string, string>): string {
 function vlessLink(ctx: LinkContext): string {
   const { user, address } = ctx;
   const query = qs({ ...commonQuery(ctx), encryption: "none" });
-  return `vless://${user.uuid}@${address}:443?${query}#${encodeURIComponent(label(ctx.inbound))}`;
+  return `vless://${user.uuid}@${address}:443?${query}#${encodeURIComponent(label(user, ctx.inbound))}`;
 }
 
 function trojanLink(ctx: LinkContext): string {
   const { user, address } = ctx;
   const query = qs(commonQuery(ctx));
   return `trojan://${encodeURIComponent(user.password)}@${address}:443?${query}#${encodeURIComponent(
-    label(ctx.inbound),
+    label(user, ctx.inbound),
   )}`;
 }
 
@@ -67,7 +67,7 @@ function vmessLink(ctx: LinkContext): string {
   const isXhttp = inbound.transport === "xhttp";
   const obj = {
     v: "2",
-    ps: label(inbound),
+    ps: label(user, inbound),
     add: address,
     port: "443",
     id: user.uuid,
