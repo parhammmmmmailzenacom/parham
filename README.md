@@ -26,6 +26,15 @@
   &nbsp;
   <img src=".github/badges/transports.svg" alt="Transports" height="38" />
 </p>
+<p>
+  <a href="https://github.com/parham101112131415/parham-railway/stargazers"><img src="https://img.shields.io/github/stars/parham101112131415/parham-railway?style=for-the-badge&logo=github&logoColor=white&labelColor=0b0b0f&color=ee3a3a" alt="Stars" /></a>
+  &nbsp;
+  <a href="https://github.com/parham101112131415/parham-railway/forks"><img src="https://img.shields.io/github/forks/parham101112131415/parham-railway?style=for-the-badge&logo=github&logoColor=white&labelColor=0b0b0f&color=16161d" alt="Forks" /></a>
+  &nbsp;
+  <img src="https://img.shields.io/badge/Node-24-ee3a3a?style=for-the-badge&logo=node.js&logoColor=white&labelColor=0b0b0f" alt="Node 24" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Xray-v26.9.9-ee3a3a?style=for-the-badge&labelColor=0b0b0f" alt="Xray-core" />
+</p>
 
 <br/>
 <br/>
@@ -38,7 +47,26 @@
 
 <br/>
 
-<img src=".github/preview.svg" width="100%" alt="Parham panel preview" />
+<img src=".github/preview.svg" width="100%" alt="Parham dashboard preview" />
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+<img src=".github/preview-users.svg" width="100%" alt="Users page" />
+
+**Users** — live status dots, usage bars, one-tap QR & copy.
+
+</td>
+<td width="50%" valign="top">
+
+<img src=".github/preview-sub.svg" width="100%" alt="Subscription page" />
+
+**Subscription** — client page + phone view with QR and app buttons.
+
+</td>
+</tr>
+</table>
 
 > [!TIP]
 > **Fork → Deploy on Railway → Expose port `8080` → Open the panel.** Four steps, zero config, live in minutes.
@@ -108,6 +136,15 @@ The Owner adds Admins with scoped page access and personal data quotas — and e
 | **Subscription** | A gorgeous per-user page with a live usage chart, QR codes and a base64 subscription for clients. |
 | **Telegram Bot** | Optional bot: get your sub link + QR right inside Telegram. |
 | **Security** | JWT sessions, built-in rate limiting, and sniffing fully disabled to prevent the QUIC crash. |
+
+| | Parham | Plain Xray panels |
+|:--|:--|:--|
+| One-click Railway deploy | ✅ | ❌ manual VPS setup |
+| Red/black animated theme + sounds | ✅ | ❌ stock UI |
+| Live connected IPs per user | ✅ | ⚠️ partial |
+| Beautiful client sub page + QR | ✅ | ⚠️ raw links only |
+| Telegram bot with QR | ✅ | ❌ |
+| Zero env vars to start | ✅ | ❌ |
 
 <br/>
 
@@ -206,6 +243,26 @@ npm run dev     # web on :5173, server on :8080 (proxied)
 npm run build   # production build (web + server)
 npm start       # serve API + built frontend on :8080
 ```
+
+<details>
+<summary><b>FAQ — سوالات پرتکرار</b></summary>
+
+**پنل بالا نمیاد / 404 میده؟**
+سرویس Railway رو چک کن (pause یا crash نباشه)، بعد لاگ دیپلوی رو ببین. پورت اکسپوز باید `8080` باشه نه چیز دیگه.
+
+**یوزر وصل نمیشه؟**
+لینک باید `security=tls` روی پورت `443` باشه و دامنه درست توی ساب‌لینک bake شده باشه. فقط `ws` / `httpupgrade` / `xhttp` ساپورت میشن.
+
+**دیتا با ری‌دیپلوی می‌پره؟**
+Volume روی `/data` وصل کن (مرحله ۵ استقرار). بدون والیوم، SQLite داخل کانتینر می‌مونه و می‌پره.
+
+**چطور ادمین اضافه کنم؟**
+Owner وارد شو → Settings → Admins. دسترسی هر ادمین رو صفحه‌به‌صفحه می‌تونی ببندی + سقف حجم بذاری.
+
+**صداها اذیت می‌کنن؟**
+دکمه 🔊 پایین-راست صفحه رو بزن — mute میشه و توی `localStorage` می‌مونه.
+
+</details>
 
 <br/>
 
