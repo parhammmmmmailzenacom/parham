@@ -40,10 +40,20 @@
 
 <img src=".github/preview.svg" width="100%" alt="Parham panel preview" />
 
-<br/>
-
 > [!TIP]
 > **Fork → Deploy on Railway → Expose port `8080` → Open the panel.** Four steps, zero config, live in minutes.
+>
+> <details>
+> <summary>🇮🇷 راهنمای فارسی استقرار</summary>
+>
+> ۱. همین ریپو رو **Fork** کن به اکانت خودت.
+> ۲. توی Railway پروژه جدید بساز و **Deploy from GitHub repo** رو بزن.
+> ۳. خودش بیلد می‌گیره و بالا میاد — هیچ متغیری لازم نیست.
+> ۴. توی **Settings → Networking** دکمه **Generate Domain** رو بزن و پورت رو بذار **`8080`**.
+> ۵. (اختیاری) یه **Volume** روی مسیر **`/data`** وصل کن که یوزرها و تنظیمات با ری‌دیپلوی نپرن.
+> ۶. دامنه رو باز کن، صفحه **Setup** میاد — اکانت **Owner** رو بساز و وارد شو. 🔥
+>
+> </details>
 
 <br/>
 
@@ -111,6 +121,13 @@ The Owner adds Admins with scoped page access and personal data quotas — and e
 - ✨ Ripple + spark burst on every real tap, modal pop-in, toast shake on errors, glowing sidebar + logo
 - 🃏 Frosted-glass cards (`bg-bw/80` + `backdrop-blur-sm`) with a red hover glow
 - 🅿️ Glowing red **P** logo everywhere + `Made with 🔥 by Parham` footer
+
+| Swatch | Token | Use |
+|:--|:--|:--|
+| ![#ee3a3a](https://placehold.co/18x18/ee3a3a/ee3a3a.png) `#ee3a3a` | `--main: 238 58 58` | Buttons, accents, glow, scrollbar |
+| ![#ff6b6b](https://placehold.co/18x18/ff6b6b/ff6b6b.png) `#ff6b6b` | — | Highlights, gradients, online dots |
+| ![#0b0b0f](https://placehold.co/18x18/0b0b0f/0b0b0f.png) `#0b0b0f` | `--bg` (dark) | App background |
+| ![#16161d](https://placehold.co/18x18/16161d/16161d.png) `#16161d` | `--bw` (dark) | Cards, panels |
 
 **Under the hood** — React 18 + Vite 6 + Tailwind 3 (neobrutalism), React Router, TanStack Query, Recharts, Radix UI · Express + Node 24 (node:sqlite), Xray-core fetched on first boot. TLS terminated at the Railway edge; WS/HTTPUpgrade via raw `net.Socket`, XHTTP through proxy. Only `ws`, `httpupgrade`, `xhttp` — raw TCP/gRPC/WireGuard intentionally left out (they don't survive the edge).
 

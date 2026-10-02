@@ -20,8 +20,12 @@
   </defs>
 
   <rect x="4" y="4" width="992" height="612" rx="24" fill="url(#pbg)" stroke="#ee3a3a" stroke-width="4"/>
-  <circle cx="880" cy="80" r="130" fill="#ee3a3a" fill-opacity="0.10" filter="url(#pglow)"/>
-  <circle cx="120" cy="560" r="110" fill="#ff6b6b" fill-opacity="0.06" filter="url(#pglow)"/>
+  <circle cx="880" cy="80" r="130" fill="#ee3a3a" fill-opacity="0.10" filter="url(#pglow)">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="120" cy="560" r="110" fill="#ff6b6b" fill-opacity="0.06" filter="url(#pglow)">
+    <animate attributeName="opacity" values="1;0.5;1" dur="5s" repeatCount="indefinite"/>
+  </circle>
 
   <!-- topbar -->
   <rect x="230" y="28" width="742" height="64" rx="14" fill="#16161d" stroke="#000" stroke-width="2.5"/>
@@ -30,7 +34,9 @@
   <text x="312" y="67" font-size="24" font-weight="900" fill="#ffffff">Parham</text>
   <rect x="640" y="46" width="220" height="28" rx="8" fill="#0b0b0f" stroke="#ee3a3a" stroke-width="1.5"/>
   <text x="652" y="65" font-size="14" fill="#ee3a3a">720 users online</text>
-  <circle cx="930" cy="60" r="14" fill="url(#pred)"/>
+  <circle cx="930" cy="60" r="14" fill="url(#pred)">
+    <animate attributeName="opacity" values="1;0.45;1" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
 
   <!-- sidebar -->
   <rect x="28" y="28" width="186" height="564" rx="14" fill="#16161d" stroke="#000" stroke-width="2.5"/>
